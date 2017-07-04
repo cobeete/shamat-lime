@@ -1,11 +1,11 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"shamatShamatLime/model/models"
+	"shamat/LimeApp/model/models"
 ], function(UIComponent, Device, models) {
 	"use strict";
 
-	return UIComponent.extend("shamatShamatLime.Component", {
+	return UIComponent.extend("shamat.LimeApp.Component", {
 
 		metadata: {
 			manifest: "json"

@@ -12,12 +12,21 @@
     {
       "templateId": "ui5template.basicSAPUI5ApplicationProjectCommon",
       "templateVersion": "1.32.0",
+<<<<<<< Upstream, based on 298f32e4a5369c4cd6d4c2d703c05333b3d7eb10
       "dateTimeStamp": "Tue, 04 Jul 2017 08:21:55 GMT"
     },
     {
       "templateId": "ui5template.basicSAPUI5ApplicationProject",
       "templateVersion": "1.40.12",
       "dateTimeStamp": "Tue, 04 Jul 2017 08:21:57 GMT"
+=======
+      "dateTimeStamp": "Tue, 04 Jul 2017 09:02:33 GMT"
+    },
+    {
+      "templateId": "ui5template.basicSAPUI5ApplicationProject",
+      "templateVersion": "1.40.12",
+      "dateTimeStamp": "Tue, 04 Jul 2017 09:02:34 GMT"
+>>>>>>> e332306 initial commit
     }
   ],
   "translation": {
