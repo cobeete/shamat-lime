@@ -6,7 +6,8 @@
   "build": {
     "targetFolder": "dist",
     "sourceFolder": "webapp",
-    "buildRequired": true
+    "buildRequired": true,
+    "lastBuildDateTime": "Tue, 04 Jul 2017 09:25:43 GMT"
   },
   "generation": [
     {
@@ -38,5 +39,10 @@
     "notifyBeforePushLevel": "Error",
     "blockPush": false,
     "blockPushLevel": "Error"
+  },
+  "hcpdeploy": {
+    "account": "p1941732842trial",
+    "name": "limeapp",
+    "lastVersionWeTriedToDeploy": "1.0.0"
   }
 }

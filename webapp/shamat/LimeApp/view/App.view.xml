@@ -1,9 +1,17 @@
 <mvc:View controllerName="shamat.LimeApp.controller.App" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
-	displayBlock="true" xmlns="sap.m">
+	displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout">
 	<App>
 		<pages>
 			<Page title="{i18n>title}">
-				<content></content>
+				<content>
+					<l:VerticalLayout width="100%">
+						<l:content>
+							<Label text="Warnings"></Label>
+							<Label text="Channels"></Label>
+							<Label text="Campaings"></Label>
+						</l:content>
+					</l:VerticalLayout>
+				</content>
 			</Page>
 		</pages>
 	</App>
