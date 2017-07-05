@@ -1,34 +1,67 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<edmx:Edmx Version="1.0"
-    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
-    <edmx:DataServices
-        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
-        <Schema Namespace="NerdMeetup.Models"
-            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
-            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
-            xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
-            <EntityType Name="Meetup">
-                <Key>
-                    <PropertyRef Name="MeetupID" />
-                </Key>
-                <Property Name="MeetupID" Type="Edm.Int32" Nullable="false" />
-                <Property Name="Title" Type="Edm.String" Nullable="true" />
-                <Property Name="EventDate" Type="Edm.DateTime" Nullable="false" />
-                <Property Name="Description" Type="Edm.String" Nullable="true" />
-                <Property Name="HostedBy" Type="Edm.String" Nullable="true" />
-                <Property Name="ContactPhone" Type="Edm.String" Nullable="true" />
-                <Property Name="Address" Type="Edm.String" Nullable="true" />
-                <Property Name="Country" Type="Edm.String" Nullable="true" />
-                <Property Name="Latitude" Type="Edm.Double" Nullable="false" />
-                <Property Name="Longitude" Type="Edm.Double" Nullable="false" />
-                <Property Name="HostedById" Type="Edm.String" Nullable="true" />
-                <Property Name="Location" Type="NerdMeetup.Models.LocationDetail" Nullable="false" />
-            </EntityType>
-            <ComplexType Name="LocationDetail" />
-            <EntityContainer Name="NerdMeetups" m:IsDefaultEntityContainer="true">
-                <EntitySet Name="Meetups" EntityType="NerdMeetup.Models.Meetup" />
-                <FunctionImport Name="FindUpcomingMeetups" EntitySet="Meetups" ReturnType="Collection(NerdMeetup.Models.Meetup)" m:HttpMethod="GET" />
-            </EntityContainer>
-        </Schema>
-    </edmx:DataServices>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+	<edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+		<Schema Namespace="Lime.Models" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+			xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+			<EntityType Name="Warning">
+				<Key>
+					<PropertyRef Name="WarningID"/>
+				</Key>
+				<Property Name="WarningID" Type="Edm.Guid" Nullable="false"></Property>
+				<Property Name="Title" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="Date" Type="Edm.DateTime" Nullable="false"></Property>
+				<Property Name="Description" Type="Edm.String" Nullable="true"></Property>
+			</EntityType>
+			<EntityType Name="Channel">
+				<Key>
+					<PropertyRef Name="ChannelID"/>
+				</Key>
+				<Property Name="ChannelID" Type="Edm.Guid" Nullable="false"></Property>
+				<Property Name="Title" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="Date" Type="Edm.DateTime" Nullable="false"></Property>
+				<Property Name="AlertCount" Type="Edm.Int16" Nullable="false"></Property>
+				<Property Name="AlertStatus" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="OveralScore" Type="Edm.Int16" Nullable="false"></Property>
+				<Property Name="Variation" Type="Edm.Int16" Nullable="false"></Property>
+				<Property Name="VariationIncreased" Type="Edm.Boolean" Nullable="false"></Property>
+				<Property Name="VariationValues" Type="Edm.Int16" Nullable="false"></Property>
+				<Property Name="Description" Type="Edm.String" Nullable="true"></Property>
+			</EntityType>
+			<EntityType Name="Campaign">
+				<Key>
+					<PropertyRef Name="CampaignID"/>
+				</Key>
+				<Property Name="CampaignID" Type="Edm.Guid" Nullable="false"></Property>
+				<Property Name="Title" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="Date" Type="Edm.DateTime" Nullable="false"></Property>
+				<Property Name="Description" Type="Edm.String" Nullable="true"></Property>
+			</EntityType>
+			<EntityType Name="Alert">
+				<Key>
+					<PropertyRef Name="AlertID"/>
+				</Key>
+				<Property Name="AlertID" Type="Edm.Guid" Nullable="false"></Property>
+				<Property Name="Title" Type="Edm.String" Nullable="false"></Property>
+				<Property Name="Date" Type="Edm.DateTime" Nullable="false"></Property>
+				<Property Name="Description" Type="Edm.String" Nullable="true"></Property>
+			</EntityType>
+			<ComplexType Name="LocationDetail"/>
+			<EntityContainer Name="LimeWarnings" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="Warnings" EntityType="Lime.Models.Warning"/>
+				<FunctionImport Name="GetWarnings" EntitySet="Warnings" ReturnType="Collection(Lime.Models.Warning)" m:HttpMethod="GET"/>
+			</EntityContainer>
+			<EntityContainer Name="LimeChannels" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="Channels" EntityType="Lime.Models.Channel"/>
+				<FunctionImport Name="GetChannels" EntitySet="Channels" ReturnType="Collection(Lime.Models.Channel)" m:HttpMethod="GET"/>
+			</EntityContainer>
+			<EntityContainer Name="LimeCampaigns" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="Campaigns" EntityType="Lime.Models.Campaign"/>
+				<FunctionImport Name="GetCampaigns" EntitySet="Campaigns" ReturnType="Collection(Lime.Models.Campaign)" m:HttpMethod="GET"/>
+			</EntityContainer>
+			<EntityContainer Name="LimeAlerts" m:IsDefaultEntityContainer="true">
+				<EntitySet Name="Alerts" EntityType="Lime.Models.Alert"/>
+				<FunctionImport Name="GetAlerts" EntitySet="Alerts" ReturnType="Collection(Lime.Models.Alert )" m:HttpMethod="GET"/>
+			</EntityContainer>
+		</Schema>
+	</edmx:DataServices>
 </edmx:Edmx>

@@ -1,0 +1,34 @@
+[{
+	"ChannelID": 1,
+	"Title": "Facebook",
+	"Date": "/Date(1278450000000)/",
+	"AlertCount": 2,
+	"AlertStatus": "ERROR",
+	"OveralScore": 72,
+	"Variation": 7,
+	"VariationIncreased": false,
+	"VariationValues": 10,
+	"Description": "Facebook"
+}, {
+	"ChannelID": 2,
+	"Title": "Twitter",
+	"Date": "/Date(1478171994000)/",
+	"AlertCount": 1,
+	"AlertStatus": "SUCCESS",
+	"OveralScore": 56,
+	"Variation": 4,
+	"VariationIncreased": true,
+	"VariationValues": 10,
+	"Description": "Twitter"
+}, {
+	"ChannelID": 3,
+	"Title": "Youtube",
+	"Date": "/Date(1070968794000)/",
+	"AlertCount": 1,
+	"AlertStatus": "ERROR",
+	"OveralScore": 32,
+	"Variation": 2.3,
+	"VariationIncreased": true,
+	"VariationValues": 10,
+	"Description": "Youtube"
+}]

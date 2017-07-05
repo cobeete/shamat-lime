@@ -1,1 +1,16 @@
 /* Enter your custom styles here */
+
+label[data-alert-status="ERROR"] {
+	color: white;
+	background-color: red;
+}
+
+label[data-alert-status="WARNING"] {
+	color: white;
+	background-color: orange;
+}
+
+label[data-alert-status="SUCCESS"] {
+	color: white;
+	background-color: green;
+}

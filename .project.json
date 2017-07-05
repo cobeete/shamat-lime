@@ -19,6 +19,11 @@
       "templateId": "ui5template.basicSAPUI5ApplicationProject",
       "templateVersion": "1.40.12",
       "dateTimeStamp": "Tue, 04 Jul 2017 09:02:34 GMT"
+    },
+    {
+      "templateId": "servicecatalog.connectivityComponent",
+      "templateVersion": "0.0.0",
+      "dateTimeStamp": "Tue, 04 Jul 2017 10:40:40 GMT"
     }
   ],
   "translation": {
@@ -44,5 +49,12 @@
     "account": "p1941732842trial",
     "name": "limeapp",
     "lastVersionWeTriedToDeploy": "1.0.0"
+  },
+  "mockpreview": {
+    "mockUri": "",
+    "metadataFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
   }
 }

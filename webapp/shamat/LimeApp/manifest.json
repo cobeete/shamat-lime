@@ -12,6 +12,16 @@
 		"sourceTemplate": {
 			"id": "ui5template.basicSAPUI5ApplicationProject",
 			"version": "1.40.12"
+		},
+		"dataSources": {
+			"mainService": {
+				"uri": "/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/metadata.xml"
+				}
+			}
 		}
 	},
 	"sap.ui": {
@@ -42,12 +52,12 @@
 		"dependencies": {
 			"minUI5Version": "1.30.0",
 			"libs": {
-				"sap.ui.core": {},
+				"sap.collaboration": {},
 				"sap.m": {},
+				"sap.ui.comp": {},
+				"sap.ui.core": {},
 				"sap.ui.layout": {},
 				"sap.ushell": {},
-				"sap.collaboration": {},
-				"sap.ui.comp": {},
 				"sap.uxap": {}
 			}
 		},
@@ -61,6 +71,9 @@
 				"settings": {
 					"bundleName": "shamat.LimeApp.i18n.i18n"
 				}
+			},
+			"": {
+				"dataSource": "mainService"
 			}
 		},
 		"resources": {

@@ -1,0 +1,16 @@
+[{
+	"CampaignID": 1,
+	"Title": "Campaign 1 - Winter Sales",
+	"Date": "/Date(1278450000000)/",
+	"Description": ""
+}, {
+	"CampaignID": 2,
+	"Title": "Campaign 2 - Awareness",
+	"Date": "/Date(1478171994000)/",
+	"Description": ""
+}, {
+	"CampaignID": 3,
+	"Title": "Campaign 3 - Lead Generation",
+	"Date": "/Date(1070968794000)/",
+	"Description": ""
+}]
